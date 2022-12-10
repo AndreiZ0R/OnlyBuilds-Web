@@ -1,37 +1,31 @@
-import "./ClassicButton.css";
+import "./TextButton.css";
 import { useState } from "react";
 
-const ClassicButton = ({
-  backgroundColor,
+const TextButton = ({
   label,
   labelColor,
   isRounded,
   onClick,
-  hoverColor = "white",
-  hoverBackground = "black",
   extraClasses,
+  hoverColor = "white",
 }) => {
   const [hover, setHover] = useState("false");
 
   const normalStyle = {
-    backgroundColor: backgroundColor,
     color: labelColor,
+    backgroundColor: "transparent",
     borderRadius: isRounded === "true" ? "var(--borderRadius)" : 0,
-    marginLeft: "1rem",
-    marginRight: "1rem",
   };
 
   const hoverStyle = {
-    backgroundColor: hoverBackground,
+    backgroundColor: "transparent",
     color: hoverColor,
     borderRadius: isRounded === "true" ? "var(--borderRadius)" : 0,
-    marginLeft: "1rem",
-    marginRight: "1rem",
   };
 
   return (
     <button
-      className={`classicButton ${extraClasses}`}
+      className={`textButton ${extraClasses}`}
       style={hover === "true" ? hoverStyle : normalStyle}
       onMouseEnter={() => setHover("true")}
       onMouseLeave={() => setHover("false")}
@@ -42,4 +36,4 @@ const ClassicButton = ({
   );
 };
 
-export default ClassicButton;
+export default TextButton;
