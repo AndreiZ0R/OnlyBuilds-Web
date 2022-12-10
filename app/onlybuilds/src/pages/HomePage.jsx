@@ -117,7 +117,7 @@ const HomePage = () => {
                 className="formInpt"
                 placeholder="Your name"
                 id="formName"
-                type="email"
+                type="text"
                 style={{
                   borderRadius: "0.4rem",
                   border: "none",
@@ -141,7 +141,7 @@ const HomePage = () => {
                 className="formInpt"
                 id="formEmail"
                 placeholder="Your email address"
-                type="text"
+                type="email"
                 style={{
                   borderRadius: "0.4rem",
                   border: "none",
