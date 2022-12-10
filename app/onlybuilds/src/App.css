@@ -60,11 +60,18 @@ table {
 }
 
 :root {
-    --primary: #BF00FF;
-    --secondary: #00FFBF;
-    --background: #FFBF00;
-    --accent-primary: #3FFF00;
-    --accent-secondary: #FF0040;
+    --primaryColor: #BF00FF;
+    --secondaryColor: #00FFBF;
+    --backgroundColor: #FFBF00;
+    --accentPrimaryColor: #3FFF00;
+    --accentSecondaryColor: #FF0040;
+    --defaultBorderRadius: 0.7rem;
+    --defaultBorderWidth: 0.01rem;
+    --defaultBottomPadding: 0.4rem 0.8rem;
+    --defaultTransition: 350ms ease-in-out;
+    --errorColor: #ce0606;
+    --successColor: #009070;
+
 }
 
 .gradientFirst {
