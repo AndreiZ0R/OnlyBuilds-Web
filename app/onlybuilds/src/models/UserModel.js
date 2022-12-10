@@ -1,8 +1,7 @@
 export default class User {
-    constructor(username, email, profile, profilePic, firstName, lastName, city, state, country, zipcode, phoneNumber, tag) {
+    constructor(username, email, profilePic, firstName, lastName, city, state, country, zipcode, phoneNumber, tag) {
         this.username = username;
         this.email = email;
-        this.profile = profile;
         this.profilePic = profilePic;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -11,6 +10,7 @@ export default class User {
         this.zipcode = zipcode;
         this.phoneNumber = phoneNumber;
         this.tag = tag;
+        this.state = state;
     }
 
     makeAvatar(firstName, lastName) {

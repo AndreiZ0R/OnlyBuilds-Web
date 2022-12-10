@@ -51,3 +51,8 @@
 .icon {
   position: inherit;
 }
+
+.btnMargin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

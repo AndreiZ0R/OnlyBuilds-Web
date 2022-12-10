@@ -37,6 +37,7 @@
 .writing {
   font-size: 3rem;
   color: var(--primaryColor);
+  flex-wrap: wrap;
 }
 
 @keyframes blink {
@@ -52,10 +53,74 @@
 .quickLook {
   color: var(--backgroundColor);
   font-size: 5rem;
-  padding: 1rem;
+  padding: 2rem;
   display: block;
+  transition: all 0.4s ease-in;
+  letter-spacing: 0.2rem;
 }
 
 .leftAlings {
   align-self: flex-start;
+}
+
+#beCentered {
+  text-align: center;
+  width: 100%;
+}
+
+.contactCard {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actualCard {
+  background-color: #1c1919;
+  width: 50%;
+  height: 100%;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+input {
+  background: none;
+  border: 1px solid green;
+  padding: 2px;
+  content: "";
+  color: var(--primaryColor);
+}
+
+input::placeholder {
+  font-size: 0.8rem;
+}
+
+input::before {
+  border: 2px solid green;
+}
+
+textarea {
+  background: none;
+  border: none;
+}
+
+textarea::placeholder {
+  font-size: 0.8rem;
+}
+
+.formLbl {
+  font-size: 1rem;
+  color: var(--primaryColor);
+  margin-top: 1.3rem;
 }

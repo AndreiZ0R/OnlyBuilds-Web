@@ -27,9 +27,18 @@ function App() {
         onHome={() => {
           window.location = "/";
         }}
-        onAboutUs={() => {}}
-        onContactUs={() => {}}
-        onProfile={() => {}}
+        onAboutUs={() => {
+          window.location = "/";
+        }}
+        onContactUs={() => {
+          window.location = "/";
+        }}
+        onPosts={() => {
+          window.location = "/";
+        }}
+        onProfile={() => {
+          window.location = "/profile";
+        }}
       />
       <Router>
         <Routes>
