@@ -5,6 +5,8 @@ import ClassicButton from "../ClassicButton/ClassicButton.jsx";
 import TextButton from "../TextButton/TextButton";
 import SearchBar from "../SearchBar/SearchBar";
 import NavBarItem from "../NavBarItem/NavBarItem";
+import IconButtons from "../IconButton/IconButton.jsx";
+import Face5 from "@mui/icons-material/Face5";
 
 const NavBar = ({ color, extraClasses, isLoggedIn = "false" }) => {
   return (
@@ -61,7 +63,17 @@ const NavBar = ({ color, extraClasses, isLoggedIn = "false" }) => {
         </div>
       ) : (
         <div className="column is-2">
-          <TextButton label="Yees" labelColor="white" />
+          <IconButtons
+            iconColor="var(--backgroundColor)"
+            onClick={() => {}}
+            iconType={<Face5 />}
+          />
+
+          <TextButton
+            label="Profile"
+            labelColor="var(--backgroundColor)"
+            extraClasses="mediumText"
+          />
         </div>
       )}
     </nav>

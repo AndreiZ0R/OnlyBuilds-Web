@@ -1,6 +1,12 @@
 import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+
 function App() {
-  return <div>Hello World</div>;
+  return (
+    <>
+      <NavBar isLoggedIn="true" />
+    </>
+  );
 }
 
 export default App;
