@@ -1,0 +1,61 @@
+@import url("../App.css");
+
+.mySection {
+  height: 100vh;
+  width: 100%;
+}
+
+.mySection:nth-of-type(odd) {
+  background-color: var(--accentColor);
+}
+
+.mySection:nth-of-type(even) {
+  background-color: var(--primaryColor);
+}
+
+.centerItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#firstSectionTitle {
+  font-size: 8rem;
+  font-weight: bold;
+  color: var(--backgroundColor);
+  font-weight: var(--fontFamily);
+  letter-spacing: 0.3rem;
+}
+
+.blinking-cursor::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+  color: var(--backgroundColor);
+  font-size: 4rem;
+}
+
+.writing {
+  font-size: 3rem;
+  color: var(--primaryColor);
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.quickLook {
+  color: var(--backgroundColor);
+  font-size: 5rem;
+  padding: 1rem;
+  display: block;
+}
+
+.leftAlings {
+  align-self: flex-start;
+}

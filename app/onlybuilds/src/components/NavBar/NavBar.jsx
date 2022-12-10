@@ -7,7 +7,15 @@ import SearchBar from "../SearchBar/SearchBar";
 import NavBarItem from "../NavBarItem/NavBarItem";
 import Face5 from "@mui/icons-material/Face5";
 
-const NavBar = ({ isLoggedIn = "false", onSignIn, onSignUp, onProfile }) => {
+const NavBar = ({
+  isLoggedIn = "false",
+  onSignIn,
+  onSignUp,
+  onProfile,
+  onHome,
+  onAboutUs,
+  onContactUs,
+}) => {
   return (
     <nav className="columns">
       <div className="column is-2">
@@ -25,7 +33,7 @@ const NavBar = ({ isLoggedIn = "false", onSignIn, onSignUp, onProfile }) => {
         <SearchBar color="var(--primaryColor)"></SearchBar>
       </div>
       <div className="column is-1">
-        <NavBarItem label="Home" extraClasses="textBold" />
+        <NavBarItem label="Home" extraClasses="textBold" onClick={onHome} />
       </div>
       <div className="column is-1">
         <NavBarItem label="About" extraClasses="textBold" />
