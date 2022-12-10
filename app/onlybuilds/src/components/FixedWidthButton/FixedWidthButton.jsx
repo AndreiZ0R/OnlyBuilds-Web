@@ -9,6 +9,7 @@ const FixedWidthButton = ({
   onClick,
   hoverColor = "black",
   hoverLabelColor = "white",
+  extraClasses,
 }) => {
   const [hover, setHover] = useState("false");
 
@@ -26,7 +27,7 @@ const FixedWidthButton = ({
 
   return (
     <button
-      className="fixedWidthButton"
+      className={`fixedWidthButton ${extraClasses}`}
       style={hover === "true" ? hoverStyle : normalStyle}
       onMouseEnter={() => setHover("true")}
       onMouseLeave={() => setHover("false")}
