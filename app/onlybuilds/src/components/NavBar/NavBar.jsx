@@ -13,6 +13,8 @@ const NavBar = ({
   onSignUp,
   onProfile,
   onHome,
+  onAboutUs,
+  onContactUs,
 }) => {
   return (
     <nav className="columns">
