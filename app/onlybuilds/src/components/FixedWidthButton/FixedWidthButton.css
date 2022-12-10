@@ -1,0 +1,15 @@
+:root {
+  --borderRadius: 0.7rem;
+  --borderWidth: 0.01rem;
+}
+
+.fixedWidthButton {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  width: 6.25rem;
+  border-radius: var(--borderRadius);
+  background-color: purple;
+  transition: 350ms ease-in-out;
+  border: none;
+  color: white;
+}

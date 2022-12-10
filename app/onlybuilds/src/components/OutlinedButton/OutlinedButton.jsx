@@ -7,6 +7,7 @@ const OutlinedButton = ({
   labelColor,
   isRounded,
   onClick,
+  extraClasses,
 }) => {
   const [hover, setHover] = useState("false");
 
@@ -26,7 +27,7 @@ const OutlinedButton = ({
 
   return (
     <button
-      className="outlinedButton"
+      className={`outlinedButton ${extraClasses}`}
       style={hover === "true" ? hoverStyle : normalStyle}
       onMouseEnter={() => setHover("true")}
       onMouseLeave={() => setHover("false")}
