@@ -59,6 +59,17 @@ table {
     font-size: 1.375rem; /* 22px */
 }
 
+.xsText {
+    font-family: "Nunito ExtraLight";
+    font-size: 0.813rem; /* 13px */
+}
+
+.extraLargeText {
+    font-family: "Nunito ExtraLight";
+    font-size: 1.875rem; /* 30px */
+}
+
+
 :root {
     --primaryColor: #BF00FF;
     --secondaryColor: #00FFBF;
