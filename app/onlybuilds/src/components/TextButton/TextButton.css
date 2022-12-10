@@ -1,0 +1,17 @@
+:root {
+  --borderRadius: 0.7rem;
+  --borderWidth: 0.01rem;
+}
+
+.textButton {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--borderRadius);
+  background-color: white;
+  transition: 350ms ease-in-out;
+  border: none;
+}
+
+::placeholder {
+  font-family: var(--fontFamily);
+  font-size: 1rem;
+}

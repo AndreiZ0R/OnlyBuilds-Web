@@ -1,5 +1,5 @@
 @import url("https://fonts.google.com/specimen/Nunito");
-
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=JetBrains+Mono:wght@100;400;700&display=swap");
 html,
 body,
 div,
@@ -126,42 +126,51 @@ table {
 }
 
 .smallText {
-  font-family: "Nunito ExtraLight";
+  font-family: var(--fontFamily);
   font-size: 1rem; /* 16px */
 }
 
 .mediumText {
-  font-family: "Nunito ExtraLight";
+  font-family: var(--fontFamily);
   font-size: 1.125rem; /* 18px */
 }
 
 .bigText {
-  font-family: "Nunito ExtraLight";
+  font-family: var(--fontFamily);
   font-size: 1.375rem; /* 22px */
 }
 
 .xsText {
-  font-family: "Nunito ExtraLight";
+  font-family: var(--fontFamily);
   font-size: 0.813rem; /* 13px */
 }
 
 .extraLargeText {
-  font-family: "Nunito ExtraLight";
+  font-family: var(--fontFamily);
   font-size: 1.875rem; /* 30px */
 }
 
 :root {
   --primaryColor: #bf00ff;
+  --primaryColorOpacity: #bf00ffbb;
   --secondaryColor: #00ffbf;
-  --backgroundColor: #ffbf00;
+  --secondaryColorOpacity: #00ffbfbb;
+  --accentColor: #ffbf00;
+  --accentColorOpacity: #ffbf00bb;
+  --backgroundColor: white;
+  --backgroundColorOpacity: #ffffffbb;
   --accentPrimaryColor: #3fff00;
+  --accentPrimaryColorOpacity: #3fff00bb;
   --accentSecondaryColor: #ff0040;
+  --accentSecondaryColorOpacity: #ff0040bb;
   --defaultBorderRadius: 0.7rem;
   --defaultBorderWidth: 0.01rem;
   --defaultBottomPadding: 0.4rem 0.8rem;
   --defaultTransition: 350ms ease-in-out;
   --errorColor: #ce0606;
   --successColor: #009070;
+  --fontFamily: var(--jetbrainsFontFamily);
+  --jetbrainsFontFamily: "JetBrains Mono";
 }
 
 .gradientFirst {
@@ -190,4 +199,23 @@ table {
     rgba(191, 0, 255, 1) 0%,
     rgba(0, 255, 191, 1) 100%
   );
+}
+
+.inwardsDropshadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.cardDropshadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.textBold {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.textBold:hover {
+  letter-spacing: 3px;
 }

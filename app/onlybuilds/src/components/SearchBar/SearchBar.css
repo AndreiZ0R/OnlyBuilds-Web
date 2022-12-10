@@ -1,0 +1,58 @@
+@import url("../../App.css");
+
+.main {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.input {
+  content: "";
+  padding: 0.625rem;
+  width: 3rem;
+  height: 3rem;
+  background: none;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-size: 0.813rem;
+  outline: none;
+  transition: 0.5s;
+}
+
+.input:hover {
+  width: 10rem;
+  border-radius: 0.625rem;
+}
+
+svg {
+  position: absolute;
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .input {
+    /* display: inline-block; */
+    /* align-self: center; */
+    height: 3rem;
+    width: 10rem;
+    border-radius: 0.625rem;
+    position: relative;
+  }
+
+  .input::placeholder {
+    color: var(--backgroundColor);
+  }
+
+  svg {
+    fill: transparent;
+  }
+
+  .main {
+    position: sticky;
+  }
+}
