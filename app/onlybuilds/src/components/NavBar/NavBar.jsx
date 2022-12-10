@@ -75,11 +75,6 @@ const NavBar = ({
         </div>
       ) : (
         <div className="column is-2">
-          {/* <IconButtons
-            iconColor="var(--backgroundColor)"
-            onClick={() => {}}
-            iconType={<Face5 />}
-          /> */}
           <Face5 style={{ color: "var(--backgroundColor)" }} className="icon" />
 
           <TextButton

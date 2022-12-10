@@ -52,8 +52,8 @@
 
 .quickLook {
   color: var(--backgroundColor);
-  font-size: 5rem;
-  padding: 2rem;
+  font-size: 4.5rem;
+  padding: 1.5rem;
   display: block;
   transition: all 0.4s ease-in;
   letter-spacing: 0.2rem;
@@ -114,6 +114,7 @@ textarea {
   background: none;
   border: none;
   color: var(--primaryColor);
+  resize: none;
 }
 
 textarea::placeholder {

@@ -64,7 +64,7 @@ const HomePage = () => {
           justifyContent: "center",
         }}
       >
-        <span className="quickLook ">A closer look.</span>
+        <span className="quickLook applyFont">Take a closer look.</span>
         <Carousel
           images={[
             "https://www.neweggbusiness.com/smartbuyer/wp-content/uploads/DARK_FLASH_TOWER_WEBREADY-08678.jpg",
@@ -78,13 +78,13 @@ const HomePage = () => {
         />
       </div>
       <div
-        className="mySection centerItems quickLook"
+        className="mySection centerItems quickLook applyFont"
         style={{ alignItems: "flex-start" }}
       >
-        About Us
+        What drives us
       </div>
       <div
-        className="mySection centerItems quickLook"
+        className="mySection centerItems quickLook applyFont"
         style={{ alignItems: "flex-start", justifyContent: "flex-end" }}
       >
         Posts
@@ -97,13 +97,13 @@ const HomePage = () => {
           justifyContent: "flex-start",
         }}
       >
-        <span className="quickLook">Contact Us!</span>
+        <span className="quickLook applyFont">Contact Us!</span>
         <div className="contactCard">
           <div className="actualCard">
             <form action="">
               <label
-                className="formLbl"
-                for="formName"
+                className="formLbl applyFont"
+                htmlFor="formName"
                 style={{
                   display: "block",
                   color: "var(--backgroundColor)",
@@ -114,7 +114,7 @@ const HomePage = () => {
               </label>
 
               <input
-                className="formInpt"
+                className="formInpt applyFont"
                 placeholder="Your name"
                 id="formName"
                 type="text"
@@ -126,8 +126,8 @@ const HomePage = () => {
               />
 
               <label
-                className="formLbl"
-                for="formEmail"
+                className="formLbl applyFont"
+                htmlFor="formEmail"
                 style={{
                   display: "block",
                   color: "var(--backgroundColor)",
@@ -138,7 +138,7 @@ const HomePage = () => {
               </label>
 
               <input
-                className="formInpt"
+                className="formInpt applyFont"
                 id="formEmail"
                 placeholder="Your email address"
                 type="email"
@@ -150,8 +150,8 @@ const HomePage = () => {
               />
 
               <label
-                className="formLbl"
-                for="formMsg"
+                className="formLbl applyFont"
+                htmlFor="formMsg"
                 style={{
                   display: "block",
                   color: "var(--backgroundColor)",
@@ -161,11 +161,12 @@ const HomePage = () => {
                 Message
               </label>
               <textarea
-                className="formInpt"
+                className="formInpt applyFont"
                 placeholder="Leave us a message"
                 id="formMsg"
                 rows="5"
                 cols="40"
+                maxLength="250"
               ></textarea>
 
               <div style={{ paddingTop: "2rem" }}>
@@ -176,6 +177,7 @@ const HomePage = () => {
                   color="black"
                   labelColor="var(--backgroundColor)"
                   hoverBackground="var(--primaryColorOpacity)"
+                  extraClasses="applyFont"
                 />
               </div>
             </form>
