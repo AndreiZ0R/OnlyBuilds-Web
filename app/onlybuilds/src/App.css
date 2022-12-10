@@ -219,3 +219,7 @@ table {
 .textBold:hover {
   letter-spacing: 3px;
 }
+
+.applyFont {
+  font-family: var(--fontFamily);
+}

@@ -35,7 +35,7 @@ const HomePage = () => {
     return () => {
       clearTimeout(timeout);
     };
-  }, [selectedText, typing, text]);
+  }, [selectedText, typing, text, textState]);
 
   useEffect(() => {
     if (text === "") {

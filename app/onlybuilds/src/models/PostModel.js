@@ -1,3 +1,5 @@
+import User from "./UserModel";
+
 export default class Post {
     constructor(title, postId, creator, body, tag, creationDate) {
         this.title = title;
@@ -7,4 +9,10 @@ export default class Post {
         this.tag = tag;
         this.creationDate = creationDate;
     }
+
+
+    static defaultPost() {
+        return new Post('titlu', "123", User.defaultUser(), 'bodybodybodybodybody', "Invalid", "azi");
+    }
+
 };

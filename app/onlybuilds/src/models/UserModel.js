@@ -19,4 +19,20 @@ export default class User {
         avatarName = avatarName.toUpperCase();
         return avatarName;
     }
+
+    static defaultUser() {
+        return new User(
+            "unknown",
+            "unk@gmail.com",
+            "url...",
+            "Unk",
+            "Nown",
+            "n",
+            "o",
+            "l",
+            111111,
+            "9999999999",
+            "User"
+        );
+    }
 }
