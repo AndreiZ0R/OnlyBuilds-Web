@@ -5,10 +5,9 @@ import ClassicButton from "../ClassicButton/ClassicButton.jsx";
 import TextButton from "../TextButton/TextButton";
 import SearchBar from "../SearchBar/SearchBar";
 import NavBarItem from "../NavBarItem/NavBarItem";
-import IconButtons from "../IconButton/IconButton.jsx";
 import Face5 from "@mui/icons-material/Face5";
 
-const NavBar = ({ color, extraClasses, isLoggedIn = "false" }) => {
+const NavBar = ({ isLoggedIn = "false", onSignIn, onSignUp, onProfile }) => {
   return (
     <nav className="columns">
       <div className="column is-2">
@@ -48,7 +47,7 @@ const NavBar = ({ color, extraClasses, isLoggedIn = "false" }) => {
             hoverBackground="var(--primaryColorOpacity)"
             hoverColor="white"
             extraClasses="opacity50 xsText"
-            onClick={() => {}}
+            onClick={onSignIn}
           />
 
           <ClassicButton
@@ -58,21 +57,23 @@ const NavBar = ({ color, extraClasses, isLoggedIn = "false" }) => {
             backgroundColor="var(--accentColor)"
             hoverBackground="var(--accentColorOpacity)"
             extraClasses="xsText"
-            onClick={() => {}}
+            onClick={onSignUp}
           />
         </div>
       ) : (
         <div className="column is-2">
-          <IconButtons
+          {/* <IconButtons
             iconColor="var(--backgroundColor)"
             onClick={() => {}}
             iconType={<Face5 />}
-          />
+          /> */}
+          <Face5 style={{ color: "var(--backgroundColor)" }} className="icon" />
 
           <TextButton
             label="Profile"
             labelColor="var(--backgroundColor)"
             extraClasses="mediumText"
+            onClick={onProfile}
           />
         </div>
       )}

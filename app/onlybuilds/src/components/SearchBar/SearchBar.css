@@ -19,10 +19,6 @@
   font-size: 0.813rem;
   outline: none;
   transition: 0.5s;
-
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .input:hover {
@@ -32,9 +28,6 @@
 
 svg {
   position: absolute;
-  left: 0.938rem;
-  bottom: 0.625rem;
-  right: 0.625rem;
 }
 
 .input::placeholder {

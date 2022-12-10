@@ -47,3 +47,7 @@
   letter-spacing: 1px;
   color: var(--accentColor);
 }
+
+.icon {
+  position: inherit;
+}
