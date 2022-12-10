@@ -4,20 +4,17 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ProfilePage from "./pages/ProfilePage";
+import PostsPage from "./pages/PostsPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState("false");
-
-  function handleIsLoggedIn() {
-    //get la server pt a primi daca e logat sau nu
-  }
+  // const [isLoggedIn, setIsLoggedIn] = useState("false");
 
   return (
-    <div>
+    <div style={{ height: "100vh", width: "100%" }}>
       <NavBar
-        isLoggedIn={isLoggedIn}
+        // isLoggedIn={isLoggedIn}
         onSignIn={() => {
           window.location = "/login";
         }}
@@ -27,9 +24,18 @@ function App() {
         onHome={() => {
           window.location = "/";
         }}
-        onAboutUs={() => {}}
-        onContactUs={() => {}}
-        onProfile={() => {}}
+        onAboutUs={() => {
+          window.location = "/";
+        }}
+        onContactUs={() => {
+          window.location = "/";
+        }}
+        onPosts={() => {
+          window.location = "/posts";
+        }}
+        onProfile={() => {
+          window.location = "/profile";
+        }}
       />
       <Router>
         <Routes>
@@ -37,6 +43,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/posts" element={<PostsPage />} />
         </Routes>
       </Router>
     </div>

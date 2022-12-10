@@ -1,0 +1,7 @@
+@import url("../App.css");
+
+.postContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

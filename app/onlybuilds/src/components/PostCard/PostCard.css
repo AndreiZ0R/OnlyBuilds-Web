@@ -1,0 +1,106 @@
+@import url("../../App.css");
+
+.postContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainCard {
+  height: 80%;
+  width: 95%;
+  background-color: var(--backgroundColor);
+  border-radius: 3rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.headerRow {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleRow {
+  height: 10%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainRow {
+  height: 60%;
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerRow {
+  height: 10%;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.headerMainColumn {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.2rem;
+}
+
+.headerSecColumn {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.userName {
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  font-family: var(--fontFamily);
+  font-weight: bold;
+}
+
+.postTag {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.7rem;
+  color: var(--backgroundColor);
+}
+
+.titleRow span {
+  font-size: 1.5rem;
+  color: #1c1919;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  font-family: var(--fontFamily);
+}
+
+.postBody {
+  height: 100%;
+  width: 100%;
+  background-color: RGB(225, 234, 237);
+  border-radius: var(--defaultBorderRadius);
+  color: black;
+  font-family: var(--fontFamily);
+  padding: 1.5rem;
+  text-overflow: ellipsis;
+}

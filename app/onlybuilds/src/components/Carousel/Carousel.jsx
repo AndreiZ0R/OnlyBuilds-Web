@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './Carousel.css';
+import React, { useState, useEffect } from "react";
+import "./Carousel.css";
 
 const Carousel = (props) => {
   const { images } = props;
@@ -34,13 +34,14 @@ const Carousel = (props) => {
   return (
     <div className="carousel">
       <div className="carousel-image-container">
-        <img src={images[currentIndex]} alt="Current slide" className="carousel-image" />
+        <img
+          src={images[currentIndex]}
+          alt="Current slide"
+          className="carousel-image"
+        />
       </div>
-      <button onClick={handlePreviousClick}>Previous</button>
-      <button onClick={handleNextClick}>Next</button>
     </div>
   );
 };
 
 export default Carousel;
-

@@ -15,6 +15,7 @@ const NavBar = ({
   onHome,
   onAboutUs,
   onContactUs,
+  onPosts,
 }) => {
   return (
     <nav className="columns">
@@ -36,13 +37,17 @@ const NavBar = ({
         <NavBarItem label="Home" extraClasses="textBold" onClick={onHome} />
       </div>
       <div className="column is-1">
-        <NavBarItem label="About" extraClasses="textBold" />
+        <NavBarItem label="About" extraClasses="textBold" onClick={onAboutUs} />
       </div>
       <div className="column is-1">
-        <NavBarItem label="Posts" extraClasses="textBold" />
+        <NavBarItem label="Posts" extraClasses="textBold" onClick={onPosts} />
       </div>
       <div className="column is-1">
-        <NavBarItem label="Contact" extraClasses="textBold" />
+        <NavBarItem
+          label="Contact"
+          extraClasses="textBold"
+          onClick={onContactUs}
+        />
       </div>
 
       {isLoggedIn === "false" ? (
@@ -54,7 +59,7 @@ const NavBar = ({
             backgroundColor="var(--primaryColor)"
             hoverBackground="var(--primaryColorOpacity)"
             hoverColor="white"
-            extraClasses="opacity50 xsText"
+            extraClasses="opacity50 xsText btnMargin"
             onClick={onSignIn}
           />
 
@@ -64,7 +69,7 @@ const NavBar = ({
             labelColor="var(--backgroundColor)"
             backgroundColor="var(--accentColor)"
             hoverBackground="var(--accentColorOpacity)"
-            extraClasses="xsText"
+            extraClasses="xsText btnMargin"
             onClick={onSignUp}
           />
         </div>
