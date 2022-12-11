@@ -84,6 +84,7 @@
   font-size: 1.3rem;
   font-family: var(--fontFamily);
   font-weight: bold;
+  color: #414245;
 }
 
 .postTag {
@@ -109,4 +110,10 @@
   font-family: var(--fontFamily);
   padding: 1.5rem;
   text-overflow: ellipsis;
+}
+
+.postDate {
+  color: #adadad;
+  font-family: var(--fontFamily);
+  font-size: 0.9rem;
 }

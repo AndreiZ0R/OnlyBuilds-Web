@@ -17,10 +17,11 @@ const PostCard = ({
           <div className="headerMainColumn">
             <Avatar username={user.username} />
             <div className="userName">{user.username}</div>
+            <div className="postDate">{post.formattedDate()}</div>
           </div>
           <div className="headerSecColumn">
             <div
-              className="postTag"
+              className="postTag applyFont"
               style={{
                 backgroundColor:
                   post.tag === "Build-It"

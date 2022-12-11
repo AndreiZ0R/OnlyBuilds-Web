@@ -70,7 +70,7 @@ const PostsPage = () => {
       users[0].username,
       lorem,
       "Build-It",
-      "2022-12-08"
+      new Date()
     ),
     new Post(
       "Suggestion for a build around 2500$",
@@ -78,7 +78,7 @@ const PostsPage = () => {
       users[1].username,
       lorem,
       "Suggestion",
-      "2022-12-08"
+      new Date()
     ),
     new Post(
       "Need a custom pc for video editing ASAP",
@@ -86,7 +86,7 @@ const PostsPage = () => {
       users[2].username,
       lorem,
       "Build-It",
-      "2021-12-05"
+      new Date()
     ),
     new Post(
       "Any good CPU's under 600$?",
@@ -94,7 +94,7 @@ const PostsPage = () => {
       users[3].username,
       lorem,
       "Suggestion",
-      "2022-09-019"
+      new Date()
     ),
   ];
 

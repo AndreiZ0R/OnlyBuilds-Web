@@ -23,7 +23,7 @@
   font-size: 8rem;
   font-weight: bold;
   color: var(--backgroundColor);
-  font-weight: var(--fontFamily);
+  font-family: var(--fontFamily);
   letter-spacing: 0.3rem;
 }
 
@@ -38,6 +38,7 @@
   font-size: 3rem;
   color: var(--primaryColor);
   flex-wrap: wrap;
+  font-family: var(--fontFamily);
 }
 
 @keyframes blink {
@@ -72,19 +73,24 @@
   height: 100%;
   width: 100%;
   padding: 2rem;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .actualCard {
   background-color: #1c1919;
-  width: 50%;
+  /* width: 50%; */
+  width: 80%;
   height: 100%;
   border-radius: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: rgba(28, 28, 28, 0.25) 0px 54px 55px,
+    rgba(9, 8, 8, 0.12) 0px -12px 30px, rgba(16, 12, 12, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 form {
@@ -125,4 +131,40 @@ textarea::placeholder {
   font-size: 1rem;
   color: var(--primaryColor);
   margin-top: 1.3rem;
+}
+
+.addFadeAnimation {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.aboutCard {
+  background-color: var(--backgroundColor);
+  border-radius: 5rem;
+  height: 80%;
+  width: 50%;
+  margin-right: 8rem;
+  padding: 3rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.aboutCard p {
+  color: #1c1919;
+  font-size: 1.6rem;
+  text-overflow: ellipsis;
 }

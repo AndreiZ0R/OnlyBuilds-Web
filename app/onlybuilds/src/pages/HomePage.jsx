@@ -2,8 +2,39 @@ import "./HomePage.css";
 import Carousel from "../components/Carousel/Carousel.jsx";
 import { useEffect, useState } from "react";
 import ClassicButton from "../components/ClassicButton/ClassicButton";
+import PostCard from "../components/PostCard/PostCard.jsx";
+
+import User from "../models/UserModel.js";
+import Post from "../models/PostModel.js";
 
 const HomePage = () => {
+  const loremTxt =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id culpa hic? Minima reprehenderit similique iure eius, adipisci delectus optio odio iusto ipsa quam vero deleniti eaque repellat perferendis dolorum.\
+     Illo nam error reiciendis molestiae vel, odio dolore sint necessitatibus nulla, ad, deserunt impedit quam quo! Magni placeat laudantium eos dolorem accusantium fuga soluta illum in, nemo eius! Natus, doloremque. Illo nam error reiciendis molestiae vel, odio dolore sint necessitatibus nulla, ad, deserunt impedit quam quo! Magni placeat laudantium eos dolorem accusantium fuga soluta illum in, nemo eius! Natus, doloremque.\
+     Vitae illo temporibus laboriosam eum incidunt eos voluptatem provident, sed, ea non facilis! Sapiente, consequuntur accusantium inventore nemo laboriosam quaerat perspiciatis necessitatibus quo, minima asperiores ex quis veritatis. Explicabo, rem?";
+
+  const mockUser = new User(
+    "user",
+    "mockinger@gmail.com",
+    "url...",
+    "Mock",
+    "Ingbird",
+    "Qatari",
+    "Doha",
+    "Qatara",
+    541554,
+    "0727752379",
+    "User"
+  );
+  const mockPost = new Post(
+    "Announcement Title",
+    "1",
+    mockUser.username,
+    loremTxt,
+    "post-tag",
+    new Date()
+  );
+
   const strings = [
     "Where components meet professionals.",
     "Ask | Build | Enjoy.",
@@ -79,25 +110,66 @@ const HomePage = () => {
       </div>
       <div
         className="mySection centerItems quickLook applyFont"
-        style={{ alignItems: "flex-start" }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
       >
-        What drives us
+        <div className="aboutCard">
+          <p>
+            We like to believe that everyone has a purpose on this planet, no
+            matter how big or small it might be. Creating software is what we
+            like. It's what{" "}
+            <span style={{ color: "var(--primaryColor)" }}>we do</span>. It's a
+            <span style={{ color: "var(--primaryColor)" }}>lifestyle</span>.
+            <span
+              style={{
+                color: "var(--primaryColor)",
+                display: "block",
+                paddingTop: "1.5rem",
+                paddingBottom: "1.5rem",
+              }}
+            >
+              "Mori memorias non somnia."
+            </span>
+            It's a motto we get to live by every day and encourage you all to
+            follow it: Die with{" "}
+            <span style={{ color: "var(--primaryColor)" }}>memoreis</span>, not
+            <span style={{ color: "var(--primaryColor)" }}>dreams</span>.
+            <div style={{ paddingTop: "1.5rem", paddingBottom: "1.5rem" }}>
+              So, if your dreams are also tech-wise, you're already one of us!
+            </div>
+          </p>
+        </div>
+        What drives us.
       </div>
       <div
         className="mySection centerItems quickLook applyFont"
-        style={{ alignItems: "flex-start", justifyContent: "flex-end" }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
       >
-        Posts
+        Create a post.
+        <div
+          style={{ fontSize: "1rem", display: "inline-block", width: "50%" }}
+        >
+          <PostCard user={mockUser} post={mockPost} />
+        </div>
       </div>
       <div
         className="mySection centerItems"
         style={{
-          alignItems: "flex-start",
-          flexDirection: "column",
-          justifyContent: "flex-start",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          alignItems: "center",
         }}
       >
-        <span className="quickLook applyFont">Contact Us!</span>
         <div className="contactCard">
           <div className="actualCard">
             <form action="">
@@ -183,6 +255,7 @@ const HomePage = () => {
             </form>
           </div>
         </div>
+        <span className="quickLook applyFont">Let's get in touch!</span>
       </div>
     </>
   );

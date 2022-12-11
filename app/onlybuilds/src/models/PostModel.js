@@ -15,4 +15,10 @@ export default class Post {
         return new Post('titlu', "123", User.defaultUser(), 'bodybodybodybodybody', "Invalid", "azi");
     }
 
+    formattedDate() {
+        return this.creationDate.toLocaleDateString('en-GB', {
+            day: 'numeric', month: 'short', year: 'numeric'
+        }).replace(/ /g, '-');
+    }
+
 };
