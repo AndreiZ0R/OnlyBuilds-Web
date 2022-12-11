@@ -12,9 +12,6 @@ const requestLogin = `${baseURL}/login`;
 const createPost = `${baseURL}/create`;
 
 
-
-// const ApiHelper = {
-
 export const getUsersEndpoint = async function () {
     const res = await fetch(allPostsEndpoint, {
         method: 'GET', headers: {
@@ -40,26 +37,44 @@ export const requestLoginUser = async function (username, pass) {
     return data === null ? 'Succes' : 'Failed';
 };
 
-    // updateThread: async function (title, body, tag) {
-    //     const data = await fetch(updatePost, { method: 'UPDATE', body: JSON.stringify(title, body, tag) })
-    //     return data === null ? 'Succes' : 'Failed';
-    // },
 
-    // createThread: async function (title, author, tag, body) {
-    //     const data = await fetch(createPost, { method: 'CREATE', body: JSON.stringify(title, author, body, tag) })
-    //     return data === null ? 'Succes' : 'Failed';
-    // },
-
-    // createAccount: async function (first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode) {
-    //     const data = await fetch(createAcc, { method: 'CREATE', body: JSON.stringify(first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode) })
-    //     return data === null ? 'Succes' : 'Failed';
-    // },
-
-    // updateAccount: async function (inputs) {
-    //     const data = await fetch(createAcc, { method: 'UPDATE', body: JSON.stringify([...inputs]) })
-    //     return data === null ? 'Succes' : 'Failed';
-    // }
-// };
+export const updateThread = async function (title, body, tag) {
+    const data = await fetch(updatePost, {
+        method: 'UPDATE', body: JSON.stringify(title, body, tag), headers: {
+            'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true'
+        }
+    })
+    return data === null ? 'Succes' : 'Failed';
+}
 
 
-// export default ApiHelper;
+export const createThread = async function (title, author, tag, body) {
+    const data = await fetch(createPost, {
+        method: 'CREATE', body: JSON.stringify(title, author, body, tag), headers: {
+            'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true'
+        }
+    })
+    return data === null ? 'Succes' : 'Failed';
+}
+
+export const createAccount = async function (first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode) {
+    const data = await fetch(createAcc, {
+        method: 'CREATE', body: JSON.stringify(first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode), headers: {
+            'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true'
+        }
+    })
+    return data === null ? 'Succes' : 'Failed';
+}
+
+export const updateAccount = async function (inputs) {
+    const data = await fetch(createAcc, {
+        method: 'UPDATE', body: JSON.stringify([...inputs]), headers: {
+            'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true'
+        }
+    })
+    return data === null ? 'Succes' : 'Failed';
+}
