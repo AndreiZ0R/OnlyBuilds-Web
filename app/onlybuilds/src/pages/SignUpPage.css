@@ -1,0 +1,51 @@
+.bodySignUp {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 5rem;
+}
+
+.formPrimary {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+}
+
+.SignUpContainer {
+    height: 90%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1919;
+    color: #eae9e9;
+    box-shadow: rgba(28, 28, 28, 0.25) 0px 54px 55px, rgba(9, 8, 8, 0.12) 0px -12px 30px, rgba(16, 12, 12, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /*margin-top: -100px;*/
+    border-radius: 32px;
+}
+
+.btnSignUp {
+    color: #ffffff;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 0.5s;
+    width: 50%;
+}
+
+.submittingText {
+    color: var(--successColor);
+    margin-top: 20px;
+    padding-left: 20px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 0.5s;
+    width: 50%;
+}

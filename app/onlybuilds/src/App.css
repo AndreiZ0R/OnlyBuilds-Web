@@ -168,7 +168,7 @@ table {
   --defaultBottomPadding: 0.4rem 0.8rem;
   --defaultTransition: 350ms ease-in-out;
   --errorColor: #ce0606;
-  --successColor: #009070;
+  --successColor: #e3ca26;
   --fontFamily: var(--jetbrainsFontFamily);
   --jetbrainsFontFamily: "JetBrains Mono";
 }

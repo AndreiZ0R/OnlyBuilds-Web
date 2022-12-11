@@ -1,0 +1,43 @@
+@import url("../../App.css");
+.formInput{
+    /*border-radius: 20px;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+input{
+    padding: 15px;
+    margin: 10px 0px;
+    border-radius: 15px;
+    border-color: var(--accentColor);
+}
+
+input::placeholder {
+    color: var(--primaryColor);
+}
+
+
+label{
+    font-size: 12px;
+    color: gray;
+}
+
+.SignUp {
+    color: var(--backgroundColor);
+    font-size: 4rem;
+    padding-bottom: 1.2rem;
+}
+
+
+
+/*input:invalid[focused="true"]{*/
+/*    border: 1px solid var(--errorColor);*/
+/*}*/
+
+/*input:invalid[focused="true"] ~ span{*/
+/*    display: block;*/
+/*}*/
