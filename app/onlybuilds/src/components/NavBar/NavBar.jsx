@@ -77,9 +77,12 @@ const NavBar = ({
         <div className="column is-2">
           <Face5 style={{ color: "var(--backgroundColor)" }} className="icon" />
 
-          <TextButton
+          <ClassicButton
             label="Profile"
+            isRounded="true"
             labelColor="var(--backgroundColor)"
+            backgroundColor="#1c1919"
+            hoverBackground="var(--primaryColorOpacity)"
             extraClasses="mediumText"
             onClick={onProfile}
           />

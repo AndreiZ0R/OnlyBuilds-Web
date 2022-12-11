@@ -1,0 +1,135 @@
+@import url("../App.css");
+
+.profileBackground {
+  height: 90vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* padding: 2.5rem; */
+}
+
+.profileMain {
+  height: 95%;
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftCol {
+  width: 30%;
+  height: inherit;
+
+  border-right: 1px solid #474747;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rightCol {
+  width: 70%;
+  height: inherit;
+
+  border-left: 1px solid #474747;
+}
+
+.userType {
+  padding: 0.5rem 0.8rem;
+  background-color: var(--accentColor);
+  border-radius: var(--defaultBorderRadius);
+  color: var(--backgroundColor);
+  font-family: var(--fontFamily);
+}
+
+.profileDropshadow {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.genericRow {
+  width: 100%;
+  height: 33.33%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0.7rem;
+}
+
+.genericRow:nth-child(2) {
+  border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+}
+
+.rowTitle {
+  font-size: 1.5rem;
+  font-family: var(--fontFamily);
+  width: 100%;
+
+  display: inline;
+}
+
+.rowTitle:hover {
+  color: #fff;
+  text-shadow: 0 0 5px var(--primaryColor), 0 0 25px var(--primaryColor),
+    0 0 50px var(--primaryColor), 0 0 100px var(--primaryColor);
+}
+
+.miniCard {
+  /* height: 6.2rem; */
+  /* width: 6.2rem; */
+  border-radius: 10px;
+  border: 1px solid #474747;
+  font-family: var(--fontFamily);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.35s ease-in-out;
+
+  margin-right: 0.7rem;
+  padding: 1.2rem 1.7rem;
+
+  color: #474747;
+}
+
+.miniCard .edit {
+  display: none;
+}
+
+.miniCard:hover {
+  transform: scale(1.1);
+  background-color: rgba(113, 116, 120, 0.3);
+  color: black;
+}
+
+.normalRow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.ratingRow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.star {
+  position: relative;
+  left: 0;
+}

@@ -16,7 +16,8 @@ const createPost = `${baseURL}/create`;
 const ApiHelper = {
 
     getUsersEndpoint: async function () {
-        const data = await fetch(allPostsEndpoint, { method: 'GET' });
+        const res = await fetch(allPostsEndpoint, { method: 'GET' });
+        const data = await res.json()
         return data;
     },
 

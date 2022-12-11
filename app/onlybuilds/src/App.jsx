@@ -15,6 +15,7 @@ function App() {
     <div style={{ height: "100vh", width: "100%" }}>
       <NavBar
         // isLoggedIn={isLoggedIn}
+        isLoggedIn="true"
         onSignIn={() => {
           window.location = "/login";
         }}

@@ -1,9 +1,19 @@
 import "./Avatar.css";
 
-const Avatar = ({ username }) => {
+const Avatar = ({
+  username,
+  size = "6.25rem",
+  border = "none",
+  textClasses,
+}) => {
   return (
-    <div className="circle">
-      <div className="label">{(username[0] + username[1]).toUpperCase()}</div>
+    <div
+      className="circle"
+      style={{ height: size, width: size, border: border }}
+    >
+      <div className="applyFont label">
+        {(username[0] + username[1]).toUpperCase()}
+      </div>
     </div>
   );
 };
