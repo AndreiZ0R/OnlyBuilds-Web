@@ -5,3 +5,15 @@
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: 768px) {
+  .postContainer {
+    display: block;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  * {
+    font-size: 10px;
+  }
+}

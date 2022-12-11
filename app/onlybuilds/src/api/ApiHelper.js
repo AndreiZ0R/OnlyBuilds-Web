@@ -1,4 +1,4 @@
-const baseURL = 'https://4b42-82-79-151-78.eu.ngrok.io';
+const baseURL = 'https://040d-109-166-138-142.eu.ngrok.io';
 const threads = '/threads';
 const accounts = '/accounts';
 
@@ -13,39 +13,53 @@ const createPost = `${baseURL}/create`;
 
 
 
-const ApiHelper = {
+// const ApiHelper = {
 
-    getUsersEndpoint: async function () {
-        const res = await fetch(allPostsEndpoint, { method: 'GET' });
-        const data = await res.json()
-        return data;
-    },
+export const getUsersEndpoint = async function () {
+    const res = await fetch(allPostsEndpoint, {
+        method: 'GET', headers: {
+            'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true'
+        }
+    });
 
-    requestLoginUser: async function (username, pass) {
-        const data = await fetch(requestLogin, { method: 'POST', body: JSON.stringify(username, pass) })
-        return data === null ? 'Succes' : 'Failed';
-    },
+    const data = await res.json();
 
-    updateThread: async function (title, body, tag) {
-        const data = await fetch(updatePost, { method: 'UPDATE', body: JSON.stringify(title, body, tag) })
-        return data === null ? 'Succes' : 'Failed';
-    },
+    console.log(data);
 
-    createThread: async function (title, author, tag, body) {
-        const data = await fetch(createPost, { method: 'CREATE', body: JSON.stringify(title, author, body, tag) })
-        return data === null ? 'Succes' : 'Failed';
-    },
-
-    createAccount: async function (first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode) {
-        const data = await fetch(createAcc, { method: 'CREATE', body: JSON.stringify(first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode) })
-        return data === null ? 'Succes' : 'Failed';
-    },
-
-    updateAccount: async function (inputs) {
-        const data = await fetch(createAcc, { method: 'UPDATE', body: JSON.stringify([...inputs]) })
-        return data === null ? 'Succes' : 'Failed';
-    }
+    return data;
 };
 
+export const requestLoginUser = async function (username, pass) {
+    const data = await fetch(requestLogin, {
+        method: 'POST', body: JSON.stringify(username, pass), headers: {
+            'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true'
+        }
+    })
+    return data === null ? 'Succes' : 'Failed';
+};
 
-export default ApiHelper;
+    // updateThread: async function (title, body, tag) {
+    //     const data = await fetch(updatePost, { method: 'UPDATE', body: JSON.stringify(title, body, tag) })
+    //     return data === null ? 'Succes' : 'Failed';
+    // },
+
+    // createThread: async function (title, author, tag, body) {
+    //     const data = await fetch(createPost, { method: 'CREATE', body: JSON.stringify(title, author, body, tag) })
+    //     return data === null ? 'Succes' : 'Failed';
+    // },
+
+    // createAccount: async function (first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode) {
+    //     const data = await fetch(createAcc, { method: 'CREATE', body: JSON.stringify(first_name, last_name, username, email, password, phone, account_type, country, state, city, zipcode) })
+    //     return data === null ? 'Succes' : 'Failed';
+    // },
+
+    // updateAccount: async function (inputs) {
+    //     const data = await fetch(createAcc, { method: 'UPDATE', body: JSON.stringify([...inputs]) })
+    //     return data === null ? 'Succes' : 'Failed';
+    // }
+// };
+
+
+// export default ApiHelper;

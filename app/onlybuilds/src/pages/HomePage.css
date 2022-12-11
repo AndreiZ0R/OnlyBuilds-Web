@@ -25,6 +25,7 @@
   color: var(--backgroundColor);
   font-family: var(--fontFamily);
   letter-spacing: 0.3rem;
+  flex-wrap: wrap;
 }
 
 .blinking-cursor::after {
@@ -167,4 +168,19 @@ textarea::placeholder {
   color: #1c1919;
   font-size: 1.6rem;
   text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .aboutCard {
+    width: 100%;
+  }
+
+  .actualCard {
+    width: 100%;
+  }
+
+  #firstSectionTitle {
+    font-size: 6rem;
+  }
 }

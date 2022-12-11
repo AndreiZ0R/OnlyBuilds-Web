@@ -6,7 +6,7 @@ import SignupPage from "./pages/SignupPage";
 import ProfilePage from "./pages/ProfilePage";
 import PostsPage from "./pages/PostsPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ApiHelper from "./api/ApiHelper";
+import { getUsersEndpoint } from "./api/ApiHelper";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState("false");
@@ -14,8 +14,7 @@ function App() {
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <NavBar
-        // isLoggedIn={isLoggedIn}
-        isLoggedIn="true"
+        isLoggedIn="false"
         onSignIn={() => {
           window.location = "/login";
         }}
@@ -29,10 +28,10 @@ function App() {
           window.location = "/";
         }}
         onContactUs={() => {
-          window.location = "/";
+          // window.location = "/";
           console.log("Trying a fetch...");
 
-          ApiHelper.allPostsEndpoint()
+          getUsersEndpoint()
             .then((data) => {
               console.log(data);
             })

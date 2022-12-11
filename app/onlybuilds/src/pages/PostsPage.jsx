@@ -1,12 +1,36 @@
 import PostCard from "../components/PostCard/PostCard";
 import User from "../models/UserModel.js";
 import Post from "../models/PostModel.js";
+import { useState, useEffect } from "react";
 
 const PostsPage = () => {
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
+
   const lorem =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id culpa hic? Minima reprehenderit similique iure eius, adipisci delectus optio odio iusto ipsa quam vero deleniti eaque repellat perferendis dolorum.\
      Illo nam error reiciendis molestiae vel, odio dolore sint necessitatibus nulla, ad, deserunt impedit quam quo! Magni placeat laudantium eos dolorem accusantium fuga soluta illum in, nemo eius! Natus, doloremque. Illo nam error reiciendis molestiae vel, odio dolore sint necessitatibus nulla, ad, deserunt impedit quam quo! Magni placeat laudantium eos dolorem accusantium fuga soluta illum in, nemo eius! Natus, doloremque.\
      Vitae illo temporibus laboriosam eum incidunt eos voluptatem provident, sed, ea non facilis! Sapiente, consequuntur accusantium inventore nemo laboriosam quaerat perspiciatis necessitatibus quo, minima asperiores ex quis veritatis. Explicabo, rem?";
+
+  const mobileLorem =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id culpa hic? Minima reprehenderit similique iure eius, adipisci delectus optio odio iusto ipsa quam vero deleniti eaque repellat perferendis dolorum.\
+";
 
   const users = [
     new User(
@@ -68,7 +92,7 @@ const PostsPage = () => {
       "PC under 2000$",
       "1",
       users[0].username,
-      lorem,
+      windowSize.innerWidth > 756 ? lorem : mobileLorem,
       "Build-It",
       new Date()
     ),
@@ -76,7 +100,7 @@ const PostsPage = () => {
       "Suggestion for a build around 2500$",
       "1",
       users[1].username,
-      lorem,
+      windowSize.innerWidth > 756 ? lorem : mobileLorem,
       "Suggestion",
       new Date()
     ),
@@ -84,7 +108,7 @@ const PostsPage = () => {
       "Need a custom pc for video editing ASAP",
       "1",
       users[2].username,
-      lorem,
+      windowSize.innerWidth > 756 ? lorem : mobileLorem,
       "Build-It",
       new Date()
     ),
@@ -92,13 +116,13 @@ const PostsPage = () => {
       "Any good CPU's under 600$?",
       "1",
       users[3].username,
-      lorem,
+      windowSize.innerWidth > 756 ? lorem : mobileLorem,
       "Suggestion",
       new Date()
     ),
   ];
 
-  return (
+  const webView = (
     <>
       <div className="postContainer">
         <PostCard user={users[0]} post={posts[0]} onClick={() => {}} />
@@ -110,6 +134,25 @@ const PostsPage = () => {
       </div>
     </>
   );
+
+  const mobileView = (
+    <>
+      <div className="postContainer">
+        <PostCard user={users[0]} post={posts[0]} onClick={() => {}} />
+      </div>
+      <div className="postContainer">
+        <PostCard user={users[1]} post={posts[1]} onClick={() => {}} />
+      </div>
+      <div className="postContainer">
+        <PostCard user={users[2]} post={posts[2]} onClick={() => {}} />
+      </div>
+      <div className="postContainer">
+        <PostCard user={users[3]} post={posts[3]} onClick={() => {}} />
+      </div>
+    </>
+  );
+
+  return <>{windowSize.innerWidth > 756 ? webView : mobileView}</>;
 };
 
 export default PostsPage;

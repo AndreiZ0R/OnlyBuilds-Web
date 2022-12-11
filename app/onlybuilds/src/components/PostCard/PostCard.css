@@ -117,3 +117,22 @@
   font-family: var(--fontFamily);
   font-size: 0.9rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .headerMainColumn {
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  .headerSecColumn {
+    width: 20%;
+  }
+
+  .postDate {
+    display: block;
+  }
+
+  .userName {
+    padding: 5px;
+  }
+}
