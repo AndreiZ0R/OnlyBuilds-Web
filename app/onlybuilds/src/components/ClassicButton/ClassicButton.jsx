@@ -17,16 +17,12 @@ const ClassicButton = ({
     backgroundColor: backgroundColor,
     color: labelColor,
     borderRadius: isRounded === "true" ? "var(--borderRadius)" : 0,
-    // marginLeft: "1rem",
-    // marginRight: "1rem",
   };
 
   const hoverStyle = {
     backgroundColor: hoverBackground,
     color: hoverColor,
     borderRadius: isRounded === "true" ? "var(--borderRadius)" : 0,
-    // marginLeft: "1rem",
-    // marginRight: "1rem",
   };
 
   return (

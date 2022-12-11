@@ -1,10 +1,12 @@
+@import url("../../App.css");
+
 :root {
-    --borderRadius: 0.7rem;
+  --borderRadius: 0.7rem;
 }
 
-.classicButton{
-    padding: 0.4rem 0.8rem;
-    background-color: white;
-    color: purple;
-    transition: 350ms ease-in-out;
+.classicButton {
+  padding: 0.4rem 0.8rem;
+  background-color: var(--backgroundColor);
+  color: var(--primaryColor);
+  transition: 350ms ease-in-out;
 }
