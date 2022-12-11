@@ -11,6 +11,20 @@ const updateAcc = `${baseURL}${accounts}/update`;
 const requestLogin = `${baseURL}/login`;
 const createPost = `${baseURL}/create`;
 
+const getUser = `${baseURL}${accounts}/get?username=`;
+
+
+export const getUserByName = async function (username) {
+    const res = await fetch(`${getUser}${username}`, {
+        method: 'GET', headers: {
+            'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true'
+        }
+    });
+    const data = await res.json();
+    return data;
+}
+
 
 export const getUsersEndpoint = async function () {
     const res = await fetch(allPostsEndpoint, {
@@ -21,8 +35,6 @@ export const getUsersEndpoint = async function () {
     });
 
     const data = await res.json();
-
-    console.log(data);
 
     return data;
 };

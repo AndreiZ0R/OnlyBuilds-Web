@@ -12,7 +12,7 @@ const Avatar = ({
       style={{ height: size, width: size, border: border }}
     >
       <div className="applyFont label">
-        {(username[0] + username[1]).toUpperCase()}
+        {username === null ? (username[0] + username[1]).toUpperCase() : "?"}
       </div>
     </div>
   );

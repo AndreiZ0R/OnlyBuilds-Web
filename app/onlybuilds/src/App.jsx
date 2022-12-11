@@ -6,7 +6,6 @@ import SignupPage from "./pages/SignupPage";
 import ProfilePage from "./pages/ProfilePage";
 import PostsPage from "./pages/PostsPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { getUsersEndpoint } from "./api/ApiHelper";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState("false");
@@ -29,15 +28,6 @@ function App() {
         }}
         onContactUs={() => {
           // window.location = "/";
-          console.log("Trying a fetch...");
-
-          getUsersEndpoint()
-            .then((data) => {
-              console.log(data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
         }}
         onPosts={() => {
           window.location = "/posts";
