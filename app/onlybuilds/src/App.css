@@ -223,3 +223,7 @@ table {
 .applyFont {
   font-family: var(--fontFamily);
 }
+
+.btnLoginSubmit {
+  margin-top: 1.5rem;
+}

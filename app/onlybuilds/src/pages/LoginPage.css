@@ -1,4 +1,4 @@
-.bodySignUp {
+.bodyLogin {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -12,9 +12,10 @@
     justify-content: center;
     display: flex;
     padding: 0;
+
 }
 
-.SignUpContainer {
+.LoginContainer {
     height: 90vh;
     width: 50%;
     display: flex;
@@ -27,7 +28,7 @@
     border-radius: 32px;
 }
 
-.btnSignUp {
+.btnLogin {
     color: #ffffff;
     margin-top: 20px;
     height: 40px;
