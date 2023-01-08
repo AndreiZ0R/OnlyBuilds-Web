@@ -27,7 +27,7 @@ function App() {
           window.location = "/";
         }}
         onContactUs={() => {
-          // window.location = "/";
+          window.location = "/";
         }}
         onPosts={() => {
           window.location = "/posts";
